@@ -521,7 +521,7 @@ img{
     fill: #f4f4fd;
 }
 
-.footer-form-label {
+.footer-form-text {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -530,10 +530,10 @@ img{
     margin-bottom: 16px;
 }
 
-/* .subscribe-form {
+.subscribe-form {
     display: flex;
     gap: 24px;
-} */
+}
 
 .subscribe-field {
     border: 1px solid #fff;
