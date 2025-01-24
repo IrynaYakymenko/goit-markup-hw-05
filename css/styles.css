@@ -588,6 +588,10 @@ img{
     stroke: #ffffff;
     fill: #ffffff;
 }
+
+.modal-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 /* #endregion backdrop */
 
 /* #region review form styles */
@@ -703,12 +707,14 @@ img{
     border: 1px solid #404bbf;
     border-radius: 2px;
     fill: #f4f4fd;
+    border: none;
 
 }
 
 .review-form-policy-checkbox:focus 
 + .review-form-policy-lable 
 .review-form-custom-checkbox {
+    border: none;
     outline: 2px solid rgba(0, 0, 255, 0.5);
 
 }
@@ -761,7 +767,6 @@ img{
 
 .review-form-submit-btn:hover,
 .review-form-submit-btn:focus{
-    border: none;
     background-color: #404BBF;
 }
 /* #endregion review form styles */
