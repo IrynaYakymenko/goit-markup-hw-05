@@ -583,7 +583,7 @@ img{
 
 .modal-close-button:hover,
 .modal-close-button:focus {
-    
+    border: none;
     background-color: #404bbf;
     stroke: #ffffff;
     fill: #ffffff;
@@ -595,15 +595,19 @@ img{
 .modal-slogan {
     font-weight: 500;
     font-size: 16px;
-    margin-bottom: 16px; 
+    margin-bottom: 7px; 
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
 }
 
-.review-form-field-wrapper:not(:last-child) {
+.review-form-field-wrapper {
     margin-bottom: 8px;
+}
+
+.review-form-field-wrapper-comment {
+    margin-bottom: 16px;
 }
 
 .review-form-field-label{
@@ -687,12 +691,15 @@ img{
     margin-bottom: 24px;
 }
 
+.review-form-custom-checkbox:checked{
+    border: none;
+}
+
 .review-form-policy-checkbox:checked 
 + .review-form-policy-lable 
 .review-form-custom-checkbox {
     background-color: #404bbf;
     border-color: #404bbf;
-    border: none;
     border: 1px solid #404bbf;
     border-radius: 2px;
     fill: #f4f4fd;
@@ -754,6 +761,7 @@ img{
 
 .review-form-submit-btn:hover,
 .review-form-submit-btn:focus{
+    border: none;
     background-color: #404BBF;
 }
 /* #endregion review form styles */
