@@ -171,7 +171,7 @@ img{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1440px;
+    /* max-width: 1440px; */
 }
 
 .first-section .container{
@@ -201,7 +201,7 @@ img{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: #ffffff;
     cursor:pointer;
     margin-left: auto;
     margin-right: auto;
@@ -525,3 +525,221 @@ img{
     fill: #f4f4fd;
 }
 /* #endregion footer*/
+
+/* #region backdrop */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 408px;
+    height: 95%;
+    max-height: 584px;
+    /* height: 584px; */
+    padding: 72px 24px 24px 24px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background: #fcfcfc;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    stroke: #2e2f42;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+    
+    background-color: #404bbf;
+    stroke: #ffffff;
+    fill: #ffffff;
+}
+/* #endregion backdrop */
+
+/* #region review form styles */
+
+.modal-slogan {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 16px; 
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+}
+
+.review-form-field-wrapper:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.review-form-field-label{
+    display: block;   
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    margin-bottom: 4px;
+}
+
+.review-form-input-wrraper {
+    position: relative;
+}
+
+.review-form-field {
+    width: 100%;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    height: 40px;
+    padding-left: 38px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-field:focus {
+    outline: transparent;
+    border-color: #4d5ae5;
+}
+
+.review-form-field-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-field:focus + .review-form-field-icon {
+    stroke: #4d5ae5;
+    fill: #4d5ae5;
+}
+
+.review-form-comment {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    padding: 8px 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    resize: none;
+}
+
+.review-form-comment:focus {
+    outline: transparent;
+    border-color: #4d5ae5;
+}
+.review-form-comment::placeholder{
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.review-form-checkbox-wrapper {
+    margin-bottom: 24px;
+}
+
+.review-form-policy-checkbox:checked 
++ .review-form-policy-lable 
+.review-form-custom-checkbox {
+    background-color: #404bbf;
+    border-color: #404bbf;
+    border: 1px solid #404bbf;
+    border-radius: 2px;
+    fill: #f4f4fd;
+
+}
+
+.review-form-policy-checkbox:focus 
++ .review-form-policy-lable 
+.review-form-custom-checkbox {
+    outline: 2px solid rgba(0, 0, 255, 0.5);
+
+}
+
+.review-form-policy-lable {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.review-form-custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    fill: transparent;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.review-form-privacy-link {
+    color: #4d5ae5;
+    text-decoration: underline;
+}
+
+.review-form-submit-btn {
+    display: block;
+    border-radius: 4px;
+    padding: 16px 32px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 169px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: #4d5ae5;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #ffffff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-submit-btn:hover,
+.review-form-submit-btn:focus{
+    background-color: #404BBF;
+}
+/* #endregion review form styles */
