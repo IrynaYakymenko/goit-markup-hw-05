@@ -521,7 +521,7 @@ img{
     fill: #f4f4fd;
 }
 
-.footer-form-text {
+.footer-form-label {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -530,10 +530,10 @@ img{
     margin-bottom: 16px;
 }
 
-.subscribe-form {
+/* .subscribe-form {
     display: flex;
     gap: 24px;
-}
+} */
 
 .subscribe-field {
     border: 1px solid #fff;
@@ -566,7 +566,8 @@ img{
 .subscribe-btn {
     display: flex;
     border-radius: 4px;
-    max-width: 165px;
+    /* max-width: 165px; */
+    min-width: 165px;
     height: 40px;
     border: none;
     gap: 16px;
